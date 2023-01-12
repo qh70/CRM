@@ -1,6 +1,6 @@
-const InputInAddNewOrder = ({type}) => {
+const InputInAddNewOrder = ({type, value, onChange}) => {
     return (
-        <input className="inputInAddNewOrder" type={type}></input>
+        <input className="inputInAddNewOrder" type={type} value={value} onChange={onChange}></input>
     )
 }
 

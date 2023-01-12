@@ -34,11 +34,10 @@ export default function Delete({ deletepopup, setDeletepopup, modules }) {
         open={deletepopup}
         onClose={handleClose}
       >
-        <div className="wordAddProductInDialog">Do you want to delete this {modules}?</div>
-        <div className="secondWordsInDeleteDialog">If you delete this {modules},you cannot recover it back.</div>
+        <div className="wordAddProductInDialog">確定刪除公司資料嗎？</div>
         <DialogActions>
-          <Button color="primary">YES,PLEASE DELETE</Button>
-          <Button onClick={handleClose} color="warning">NO</Button>
+          <Button color="primary">是的</Button>
+          <Button onClick={handleClose} color="warning">不是</Button>
         </DialogActions>
       </Dialog>
     </React.Fragment>

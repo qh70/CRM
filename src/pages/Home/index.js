@@ -29,7 +29,7 @@ import { LoginContext } from "../../LoginContext";
 const Home = () => {
     
     // for page addnewproduct
-    const [ wtcCode, setWtcCode ] = useState("");
+    const [ companyName, setCompanyName ] = useState("");
     const [ luziCode, setLuziCode ] = useState("");
     const [ customerCode, setCustomerCode ] = useState("");
     const [ gender, setGender ] = useState("");
@@ -54,43 +54,8 @@ const Home = () => {
                 {/* <Header/> */}
                 <Switch>
                     <LoginContext.Provider value={{ login, setLogin, logoutPopup, setLogoutPopup }}>
-
-                        {/* order */}
-                        <Route exact path="/order">
-                            <Order/> 
-                        </Route>
-                        <Route exact path="/addneworder">
-                            <AddNewOrder />
-                        </Route>
-                        <Route exact path="/editorder">
-                            <EditOrder />
-                        </Route>
-
-                        {/* user */}
-                        <Route exact path="/user">
-                            <User/> 
-                        </Route>
-                        <Route exact path="/addnewuser">
-                            <AddNewUser />
-                        </Route>
-                        <Route exact path="/edituser">
-                            <EditUser />
-                        </Route>
-
-                        {/* clients */}
-                        <Route exact path="/clients">
-                            <Client/> 
-                        </Route>
-                        <Route exact path="/addnewclient">
-                            <AddNewClient />
-                        </Route>
-                        <Route exact path="/editclient">
-                            <EditClient />
-                        </Route>
-
-                        {/* product */}
                         <UserContext.Provider value={{ 
-                            wtcCode, setWtcCode,
+                            companyName, setCompanyName,
                             luziCode, setLuziCode,
                             customerCode, setCustomerCode,
                             gender, setGender,
@@ -102,14 +67,15 @@ const Home = () => {
                             inspiredByBrandCN, setInspiredByBrandCN,
                             remarks, setRemarks
                         }}>
-                            <Route exact path="/product">
-                                <Product/> 
+                            {/* order */}
+                            <Route exact path="/order">
+                                <Order/> 
                             </Route>
-                            <Route exact path="/addnewproduct">
-                                <AddNewProduct/>
+                            <Route exact path="/addneworder">
+                                <AddNewOrder />
                             </Route>
-                            <Route exact path="/editproduct">
-                                <EditProduct/>
+                            <Route exact path="/editorder">
+                                <EditOrder />
                             </Route>
                         </UserContext.Provider>
                     </LoginContext.Provider>
