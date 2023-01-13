@@ -9,18 +9,30 @@ const ListAddNewOrder = ({ setOpen, setShowAddProduct, setDeletepopup, stateAllI
     
     const {
         companyName,
-        luziCode,
-        customerCode,
-        gender,
-        name,
-        nameCN,
-        inspiredByDesigner,
-        inspiredByDesignerCN,
-        inspiredByBrand,
-        inspiredByBrandCN,
-        remarks
+        centralNumber,
+        realType,
+        licenseNRegistrationStatus,
+        unitedAnniversaryDueDateGroup,
+        createLocation,
+        hKBusinessRegistrationLicenseNumber,
+        checkPerson,
+        addressOfMainBusinessLocation,
+        numberOfMainBusinessLocation,
+        faxOfMainBusinessLocation,
+        addressOfRegistrationOffice,
+        numberOfRegistrationOffice,
+        faxOfRegistrationOffice,
+        addressOfDocumentsSavePlace,
+        numberOfDocumentsSavePlace,
+        faxOfDocumentsSavePlace,
+        emailOfOfficeOfDocumentsSavePlace,
+        emailOfPersonalOfDocumentsSavePlace,
+        websiteLinklOfDocumentsSavePlace
     } = useContext(UserContext);
 
+    console.log("1")
+    console.log(faxOfMainBusinessLocation)
+    console.log("2")
     // const [showAddProduct, setShowAddProduct] = useState(false);
 
     const [value, setValue] = useState(new Date());
@@ -37,30 +49,30 @@ const ListAddNewOrder = ({ setOpen, setShowAddProduct, setDeletepopup, stateAllI
         <div className="listForOrder">
             <div className="rowInListForOrder">
                 <Titles titles="法團名稱"/>
-                <InputInAddNewOrder value = {companyName}/>
+                <InputInAddNewOrder value={companyName}/>
                 <Titles titles="中央編號"/>
-                <InputInAddNewOrder/>
+                <InputInAddNewOrder value={centralNumber}/>
             </div>
 
             <div className="rowInListForOrder">
                 <Titles titles="實體類型"/>
-                <InputInAddNewOrder/>
+                <InputInAddNewOrder value={realType}/>
                 <Titles titles="牌照/註冊狀況"/>
-                <InputInAddNewOrder/>
+                <InputInAddNewOrder value={licenseNRegistrationStatus}/>
             </div>
 
             <div className="rowInListForOrder">
                 <Titles titles="發牌/註冊日期"/>
                 <InputInAddNewOrder type="date"/>
                 <Titles titles="統一周年到期日群組"/>
-                <InputInAddNewOrder/>
+                <InputInAddNewOrder value={unitedAnniversaryDueDateGroup}/>
             </div>
 
             <div className="rowInListForOrder">
                 <Titles titles="繳交年費/遞交周年申報表的週年到期日(日/月)"/>
                 <InputInAddNewOrder type="date"/>
                 <Titles titles="成立地點"/>
-                <InputInAddNewOrder/>
+                <InputInAddNewOrder value={createLocation}/>
             </div>
 
             <div className="rowInListForOrder">
@@ -72,9 +84,9 @@ const ListAddNewOrder = ({ setOpen, setShowAddProduct, setDeletepopup, stateAllI
 
             <div className="rowInListForOrder">
                 <Titles titles="香港商業登記證編號"/>
-                <InputInAddNewOrder/>
+                <InputInAddNewOrder value={hKBusinessRegistrationLicenseNumber}/>
                 <Titles titles="核數師"/>
-                <InputInAddNewOrder/>
+                <InputInAddNewOrder value={checkPerson}/>
             </div>
         </div>
 
@@ -85,14 +97,14 @@ const ListAddNewOrder = ({ setOpen, setShowAddProduct, setDeletepopup, stateAllI
         <div className="listForOrder">
             <div className="rowInListForOrder">
                 <Titles titles="地址"/>
-                <input className="addressInAddNewOrder"></input>
+                <input className="addressInAddNewOrder" value={addressOfMainBusinessLocation}></input>
             </div>
 
             <div className="rowInListForOrder">
                 <Titles titles="電話號碼"/>
-                <InputInAddNewOrder/>
+                <InputInAddNewOrder value={numberOfMainBusinessLocation}/>
                 <Titles titles="傳真號碼"/>
-                <InputInAddNewOrder/>
+                <InputInAddNewOrder value={faxOfMainBusinessLocation}/>
             </div>
         </div>
 
@@ -101,14 +113,14 @@ const ListAddNewOrder = ({ setOpen, setShowAddProduct, setDeletepopup, stateAllI
         <div className="listForOrder">
             <div className="rowInListForOrder">
                 <Titles titles="地址"/>
-                <input className="addressInAddNewOrder"></input>
+                <input className="addressInAddNewOrder" value={addressOfRegistrationOffice}></input>
             </div>
 
             <div className="rowInListForOrder">
                 <Titles titles="電話號碼"/>
-                <InputInAddNewOrder/>
+                <InputInAddNewOrder value={numberOfRegistrationOffice}/>
                 <Titles titles="傳真號碼"/>
-                <InputInAddNewOrder/>
+                <InputInAddNewOrder value={faxOfRegistrationOffice}/>
             </div>
         </div>
 
@@ -117,26 +129,26 @@ const ListAddNewOrder = ({ setOpen, setShowAddProduct, setDeletepopup, stateAllI
         <div className="listForOrder">
             <div className="rowInListForOrder">
                 <Titles titles="地址"/>
-                <input className="addressInAddNewOrder"></input>
+                <input className="addressInAddNewOrder" value={addressOfDocumentsSavePlace}></input>
             </div>
 
             <div className="rowInListForOrder">
                 <Titles titles="電話號碼"/>
-                <InputInAddNewOrder/>
+                <InputInAddNewOrder value={numberOfDocumentsSavePlace}/>
                 <Titles titles="傳真號碼"/>
-                <InputInAddNewOrder/>
+                <InputInAddNewOrder value={faxOfDocumentsSavePlace}/>
             </div>
 
             <div className="rowInListForOrder">
                 <Titles titles="電郵地址(辦事處)"/>
-                <InputInAddNewOrder/>
+                <InputInAddNewOrder value={emailOfOfficeOfDocumentsSavePlace}/>
                 <Titles titles="電郵地址(個人)"/>
-                <InputInAddNewOrder/>
+                <InputInAddNewOrder value={emailOfPersonalOfDocumentsSavePlace}/>
             </div>
 
             <div className="rowInListForOrder">
                 <Titles titles="網站地址"/>
-                <input className="addressInAddNewOrder"></input>
+                <input className="addressInAddNewOrder" value={websiteLinklOfDocumentsSavePlace}></input>
             </div>
         </div>       
     </div>

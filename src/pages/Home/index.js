@@ -28,18 +28,27 @@ import { LoginContext } from "../../LoginContext";
 
 const Home = () => {
     
-    // for page addnewproduct
+    
     const [ companyName, setCompanyName ] = useState("");
-    const [ luziCode, setLuziCode ] = useState("");
-    const [ customerCode, setCustomerCode ] = useState("");
-    const [ gender, setGender ] = useState("");
-    const [ name, setName ] = useState("");
-    const [ nameCN, setNameCN ] = useState("");
-    const [ inspiredByDesigner, setInspiredByDesigner ] = useState("");
-    const [ inspiredByDesignerCN, setInspiredByDesignerCN ] = useState("");
-    const [ inspiredByBrand, setInspiredByBrand ] = useState("");
-    const [ inspiredByBrandCN, setInspiredByBrandCN ] = useState("");
-    const [ remarks, setRemarks ] = useState("");
+    const [ centralNumber, setCentralNumber ] = useState("");
+    const [ realType, setRealType ] = useState("");
+    const [ licenseNRegistrationStatus, setLicenseNRegistrationStatus ] = useState("");
+    const [ unitedAnniversaryDueDateGroup, setUnitedAnniversaryDueDateGroup ] = useState("");
+    const [ createLocation, setCreateLocation ] = useState("");
+    const [ hKBusinessRegistrationLicenseNumber, setHKBusinessRegistrationLicenseNumber ] = useState("");
+    const [ checkPerson, setCheckPerson ] = useState("");
+    const [ addressOfMainBusinessLocation, setAddressOfMainBusinessLocation ] = useState("");
+    const [ numberOfMainBusinessLocation, setNumberOfMainBusinessLocation ] = useState("");
+    const [ faxOfMainBusinessLocation, setFaxOfMainBusinessLocation ] = useState("");
+    const [ addressOfRegistrationOffice, setAddressOfRegistrationOffice ] = useState("");
+    const [ numberOfRegistrationOffice, setNumberOfRegistrationOffice ] = useState("");
+    const [ faxOfRegistrationOffice, setFaxOfRegistrationOffice ] = useState("");
+    const [ addressOfDocumentsSavePlace, setAddressOfDocumentsSavePlace ] = useState("");
+    const [ numberOfDocumentsSavePlace, setNumberOfDocumentsSavePlace ] = useState("");
+    const [ faxOfDocumentsSavePlace, setFaxOfDocumentsSavePlace ] = useState("");
+    const [ emailOfOfficeOfDocumentsSavePlace, setEmailOfOfficeOfDocumentsSavePlace ] = useState("");
+    const [ emailOfPersonalOfDocumentsSavePlace, setEmailOfPersonalOfDocumentsSavePlace ] = useState("");
+    const [ websiteLinklOfDocumentsSavePlace, setWebsiteLinklOfDocumentsSavePlace ] = useState("");
     
 
     const [ login, setLogin ] = useState(false);
@@ -56,16 +65,25 @@ const Home = () => {
                     <LoginContext.Provider value={{ login, setLogin, logoutPopup, setLogoutPopup }}>
                         <UserContext.Provider value={{ 
                             companyName, setCompanyName,
-                            luziCode, setLuziCode,
-                            customerCode, setCustomerCode,
-                            gender, setGender,
-                            name, setName,
-                            nameCN, setNameCN,
-                            inspiredByDesigner, setInspiredByDesigner,
-                            inspiredByDesignerCN, setInspiredByDesignerCN,
-                            inspiredByBrand, setInspiredByBrand,
-                            inspiredByBrandCN, setInspiredByBrandCN,
-                            remarks, setRemarks
+                            centralNumber, setCentralNumber,
+                            realType, setRealType,
+                            licenseNRegistrationStatus, setLicenseNRegistrationStatus,
+                            unitedAnniversaryDueDateGroup, setUnitedAnniversaryDueDateGroup,
+                            createLocation, setCreateLocation,
+                            hKBusinessRegistrationLicenseNumber, setHKBusinessRegistrationLicenseNumber,
+                            checkPerson, setCheckPerson,
+                            addressOfMainBusinessLocation, setAddressOfMainBusinessLocation,
+                            numberOfMainBusinessLocation, setNumberOfMainBusinessLocation,
+                            faxOfMainBusinessLocation, setFaxOfMainBusinessLocation,
+                            addressOfRegistrationOffice, setAddressOfRegistrationOffice,
+                            numberOfRegistrationOffice, setNumberOfRegistrationOffice,
+                            faxOfRegistrationOffice, setFaxOfRegistrationOffice,
+                            addressOfDocumentsSavePlace, setAddressOfDocumentsSavePlace,
+                            numberOfDocumentsSavePlace, setNumberOfDocumentsSavePlace,
+                            faxOfDocumentsSavePlace, setFaxOfDocumentsSavePlace,
+                            emailOfOfficeOfDocumentsSavePlace, setEmailOfOfficeOfDocumentsSavePlace,
+                            emailOfPersonalOfDocumentsSavePlace, setEmailOfPersonalOfDocumentsSavePlace,
+                            websiteLinklOfDocumentsSavePlace, setWebsiteLinklOfDocumentsSavePlace
                         }}>
                             {/* order */}
                             <Route exact path="/order">

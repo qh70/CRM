@@ -38,6 +38,78 @@ const ListAddNewOrder = ({ setOpen, setShowAddProduct, setDeletepopup, stateAllI
         setCentralNumber(e.target.value);
     }
 
+    function realTypeChange(e) {
+        setRealType(e.target.value);
+    }
+
+    function licenseNRegistrationStatusChange(e) {
+        setLicenseNRegistrationStatus(e.target.value);
+    }
+
+    function unitedAnniversaryDueDateGroupChange(e) {
+        setUnitedAnniversaryDueDateGroup(e.target.value);
+    }
+
+    function createLocationChange(e) {
+        setCreateLocation(e.target.value);
+    }
+
+    function hKBusinessRegistrationLicenseNumberChange(e) {
+        setHKBusinessRegistrationLicenseNumber(e.target.value);
+    }
+
+    function checkPersonChange(e) {
+        setCheckPerson(e.target.value);
+    }
+
+    function addressOfMainBusinessLocationChange(e) {
+        setAddressOfMainBusinessLocation(e.target.value);
+    }
+
+    function numberOfMainBusinessLocationChange(e) {
+        setNumberOfMainBusinessLocation(e.target.value);
+    }
+
+    function faxOfMainBusinessLocationChange(e) {
+        setFaxOfMainBusinessLocation(e.target.value);
+    }
+
+    function addressOfRegistrationOfficeChange(e) {
+        setAddressOfRegistrationOffice(e.target.value);
+    }
+
+    function numberOfRegistrationOfficeChange(e) {
+        setNumberOfRegistrationOffice(e.target.value);
+    }
+
+    function faxOfRegistrationOfficeChange(e) {
+        setFaxOfRegistrationOffice(e.target.value);
+    }
+
+    function addressOfDocumentsSavePlaceChange(e) {
+        setAddressOfDocumentsSavePlace(e.target.value);
+    }
+
+    function numberOfDocumentsSavePlaceChange(e) {
+        setNumberOfDocumentsSavePlace(e.target.value);
+    }
+
+    function faxOfDocumentsSavePlaceChange(e) {
+        setFaxOfDocumentsSavePlace(e.target.value);
+    }
+
+    function emailOfOfficeOfDocumentsSavePlaceChange(e) {
+        setEmailOfOfficeOfDocumentsSavePlace(e.target.value);
+    }
+
+    function emailOfPersonalOfDocumentsSavePlaceChange(e) {
+        setEmailOfPersonalOfDocumentsSavePlace(e.target.value);
+    }
+
+    function websiteLinklOfDocumentsSavePlaceChange(e) {
+        setWebsiteLinklOfDocumentsSavePlace(e.target.value);
+    }
+
     // const [showAddProduct, setShowAddProduct] = useState(false);
 
     const [value, setValue] = useState(new Date());
@@ -103,10 +175,10 @@ const ListAddNewOrder = ({ setOpen, setShowAddProduct, setDeletepopup, stateAllI
             </div>
 
             <div className="rowInListForOrder">
-                <Titles titles="電話號碼" value={numberOfMainBusinessLocation} onChange={numberOfMainBusinessLocationChange}/>
-                <InputInAddNewOrder/>
-                <Titles titles="傳真號碼" value={faxOfMainBusinessLocation} onChange={faxOfMainBusinessLocationChange}/>
-                <InputInAddNewOrder/>
+                <Titles titles="電話號碼"/>
+                <InputInAddNewOrder value={numberOfMainBusinessLocation} onChange={numberOfMainBusinessLocationChange}/>
+                <Titles titles="傳真號碼"/>
+                <InputInAddNewOrder value={faxOfMainBusinessLocation} onChange={faxOfMainBusinessLocationChange}/>
             </div>
         </div>
 
