@@ -27,14 +27,14 @@ body {
   width: 16%;height: 100vh;
   min-width: 150px;
   margin: 0px;
-  background-color: #0B184E;
+  background-color:  #363740;
 }
 
 .left {
   width: 16%;height: 100vh;
   min-width: 150px;
   margin: 0px;
-  background-color: #0B184E;
+  background-color:  #363740;
   position: fixed;top: 0;left: 0;
   z-index: 2000;
 }
@@ -292,7 +292,7 @@ body {
 
 .formControlInOrder {
   width: 220px!important;
-  margin-top: 0px !important;margin-bottom: 0px !important;margin-left: 0px !important;
+  margin-top: 20px !important;margin-bottom: 0px !important;margin-left: 38px !important;
   /* border: 1px solid #DFDFDF!important; */
   border-radius: 8px!important;
   text-align: start!important;
@@ -300,6 +300,50 @@ body {
   align-items: start;
 }
 
+.inputInOrder {
+  margin-top: 20px !important;margin-bottom: 0px !important;margin-left: 0px !important;
+  /* border: 1px solid #DFDFDF!important; */
+  border-radius: 8px!important;
+  text-align: start!important;
+  justify-content: end!important;
+  align-items: start;
+}
+
+.listInOrder {
+  display: flex;
+  width: 90%;
+  margin-top: 20px;
+  margin-left: 38px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid;
+  justify-content: start;
+}
+
+.nameInList {
+  width: 20%;
+}
+
+.typeInList {
+  width: 30%;
+}
+
+.centralNumberInList {
+  width: 25%;
+}
+
+.centralNumberInList {
+  width: 25%;
+}
+
+.textListInOrder {
+  display: flex;
+  width: 90%;
+  margin-top: 20px;
+  margin-left: 38px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid;
+  justify-content: start;
+}
 /* .selectInOrder {
   height: 50px!important;
   padding-left: 12px !important;
